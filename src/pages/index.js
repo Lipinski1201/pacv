@@ -8,9 +8,9 @@ export default function Home() {
           
       <a href=""></a>
       
-      <div className=" text-white">
-        <form>
-          <div className="font-bold w-20">
+      <div className=" text-white flex items-center justify-center h-screen flex items-center justify-center h-screen">
+        <form className="text-white-700">
+          <div className="font-bold">
             <label htmlFor="email">E-mail</label>
               <input
               type="text"
@@ -19,7 +19,7 @@ export default function Home() {
               placeholder="Digite seu email"
               />
           </div>
-          <div className="font-bold w-20 ">
+          <div className="font-bold">
             <label htmlFor="password">Senha</label>
               <input
               type="password"
