@@ -8,10 +8,12 @@ export default function Home() {
           
       <a href=""></a>
       
-      <div className=" text-white flex items-center justify-center h-screen flex items-center justify-center h-screen">
-        <form className="text-white-700">
+      <div className=" text-white block text-white-700 text-sm font-bold mb-2">
+        <form className="text-white-700 ">
           <div className="font-bold">
-            <label htmlFor="email">E-mail</label>
+            <label className="block text-white-700 text-sm font-bold mb-2" htmlFor="email"> 
+              Email
+            </label>
               <input
               type="text"
               name="email"
@@ -20,7 +22,9 @@ export default function Home() {
               />
           </div>
           <div className="font-bold">
-            <label htmlFor="password">Senha</label>
+            <label className="block text-white-700 text-sm font-bold mb-2" htmlFor="senha">
+              Senha
+            </label>
               <input
               type="password"
               name="password"
