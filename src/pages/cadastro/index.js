@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const Form = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -11,11 +12,13 @@ const Form = () => {
     // Lógica de envio do formulário
     console.log('Nome:', name);
     console.log('Email:', email);
+    console.log('Senha:', senha);
+    
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="max-w-md w-full px-6 py-8 bg-gradient-to-b from-cyan-900 to-gray-800">
+    <div className="flex items-center justify-center h-screen bg-gradient-to-b from-cyan-900 to-gray-800">
+      <div className="max-w-md w-full px-6 py-8 bg-gradient-to-b from-cyan-900 to-gray-800 border-2 border-blue-500">
         <h2 className="text-2xl font-bold mb-4">Formulário de Cadastro</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -23,7 +26,7 @@ const Form = () => {
               Nome
             </label>
             <input
-              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2  focus:ring-blue-500"
               id="name"
               type="text"
               value={name}
@@ -37,7 +40,7 @@ const Form = () => {
               Email
             </label>
             <input
-              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2  focus:ring-blue-500"
               id="email"
               type="email"
               value={email}
@@ -51,9 +54,9 @@ const Form = () => {
               Senha
             </label>
             <input
-              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2  focus:ring-blue-500"
               id="senha"
-              type="text"
+              type="password"
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
               placeholder="Digite uma senha forte"
@@ -65,9 +68,9 @@ const Form = () => {
               Confirme sua senha
             </label>
             <input
-              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2  focus:ring-blue-500"
               id="senha"
-              type="text"
+              type="password"
               value={confirmaSenha}
               onChange={(e) => setConfirmaSenha(e.target.value)}
               placeholder="Digite novamente sua senha"
