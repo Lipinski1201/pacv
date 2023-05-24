@@ -1,50 +1,78 @@
-import RootLayout from "./layout"
-import imagens from "./imagens/logo-sem-fundo.png"
-export default function Home() {
+import React, { useState } from 'react';
+import Link from 'next/link'
+
+
+const Form = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [confirmaSenha, setConfirmaSenha] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Lógica de envio do formulário
+    console.log('Nome:', name);
+    console.log('Email:', email);
+    console.log('Senha:', senha);
+
+    // Limpar os campos e o estado de erro após o envio do formulário
+
+    setName('');
+    setEmail('');
+    setSenha('');
+    setConfirmaSenha('');
+  };
+
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gradient-to-b from-cyan-900 to-gray-800">
-      <h1 className='text-5xl font-bold'>Entre em sua conta</h1>
-          
-      <a href=""></a>
-      
-      <div className=" text-white block text-white-700 text-sm font-bold mb-2">
-        <form className="text-white-700 ">
-          <div className="font-bold">
-            <label className="block text-white-700 text-sm font-bold mb-2" htmlFor="email"> 
-              Email
+    <div className="flex items-center justify-center flex-col h-screen bg-gradient-to-b from-cyan-900 to-gray-800">
+      <div className="max-w-md w-full px-6 py-8 bg-gradient-to-b from-cyan-900 to-gray-800 border-2 border-blue-500">
+        <h2 className="text-2xl font-bold mb-4">Faça seu login</h2>
+        <form onSubmit={handleSubmit}>
+
+          <div className="mb-4">
+            <label className="block text-white-700 text-sm font-bold mb-2" htmlFor="email">
+              Login
             </label>
-              <input
-              type="text"
-              name="email"
+            <input
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2  focus:ring-blue-500"
               id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Digite seu email"
-              />
+              required
+            />
           </div>
-          <div className="font-bold">
+          <div className="mb-4">
             <label className="block text-white-700 text-sm font-bold mb-2" htmlFor="senha">
               Senha
             </label>
-              <input
+            <input
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2  focus:ring-blue-500"
+              id="senha"
               type="password"
-              name="password"
-              id="password"
-              placeholder="*********"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+              placeholder="Digite sua senha"
+              required
             />
           </div>
-          </form>
+
+          <div className="flex justify-center space-x-3">
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              <Link href="/geracupom">Entrar</Link>
+            </button>
+          </div>
+        </form>
       </div>
-      <button className="p-4 rounded-3xl bg-blue-900 text-3xl font-bold   transition-all">Entrar</button>
-      <div className="">
+    </div>
 
-      </div>
-   
-      <button className="p-4 rounded-3xl bg-red-700 text-3xl font-bold   transition-all">Logar</button>
-        
+  );
+};
 
-    </main>
-  )
-}
-
-
-
+export default Form;
