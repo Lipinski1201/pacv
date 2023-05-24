@@ -1,11 +1,13 @@
 import RootLayout from "./layout"
-import imagens from "./imagens/logo-sem-fundo.png"
+import logo from "./imagens/logo.png"
 export default function Home() {
+
+
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gradient-to-b from-cyan-900 to-gray-800">
-      <h1 className='text-5xl font-bold'>Entre em sua conta</h1>
-          
+      <h3 className='text-5xl font-bold'>Entre em sua conta</h3>
+        <img src={logo} alt="logo.png" />      
       <a href=""></a>
       
       <div className=" text-white block text-white-700 text-sm font-bold mb-2">
@@ -18,7 +20,7 @@ export default function Home() {
               type="text"
               name="email"
               id="email"
-              placeholder="Digite seu email"
+              placeholder="voce@email.com"
               />
           </div>
           <div className="font-bold">
