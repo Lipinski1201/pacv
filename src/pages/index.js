@@ -38,6 +38,13 @@ export default function Home() {
       <div className="">
 
       </div>
+   
+      <button className="p-4 rounded-3xl bg-red-700 text-3xl font-bold   transition-all">Logar</button>
+        
+
     </main>
   )
 }
+
+
+
