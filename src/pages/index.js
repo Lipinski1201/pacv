@@ -48,17 +48,6 @@ const Form = () => {
 
   return (
     <div className="flex items-center justify-center flex-col h-screen bg-gradient-to-b from-cyan-900 to-gray-800">
-      {error && (
-        <div className="rounded-md bg-green-50 p-4 text-sm text-green-500 mt-10 mb-10">
-          <b>Sucesso:</b> Usuário cadastrado com sucesso!
-          <button
-            className="ml-2 text-blue-500 hover:text-blue-700 font-bold"
-            onClick={handleCloseSuccess}
-          >
-            Fechar
-          </button>
-        </div>
-      )}
       <div className="max-w-md w-full px-6 py-8 bg-gradient-to-b from-cyan-900 to-gray-800 border-2 border-blue-500">
         <h2 className="text-2xl font-bold mb-4">Faça seu login</h2>
         <form onSubmit={handleSubmit}>
