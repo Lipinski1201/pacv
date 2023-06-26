@@ -21,7 +21,7 @@ function generatePDF(outputFile) {
 
 // Obtém o nome do arquivo de saída a partir dos argumentos da linha de comando
 const args = process.argv.slice(2);
-const outputFile = 'src\pages\geracupom';
+const outputFile = 'public/pdf_export/' + args[0];
 
 // Gera o PDF e salva-o no arquivo especificado
 generatePDF(outputFile);
