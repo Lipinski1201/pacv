@@ -63,7 +63,7 @@ export default function Home() {
               
           </div>
         )}
-        <div
+          <div
           className={`col-span-${showSidebar ? '11' : '12'} px-10 bg-gradient-to-b from-cyan-900 to-gray-800 w-screen`}
         >
           <h2>conteúdo do gerador de cupom</h2>
