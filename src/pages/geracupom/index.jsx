@@ -68,12 +68,12 @@ export default function Home() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
+                  d="M4 6h16M4 12h16M4 18h16" 
                 />
               </svg>
             </button>
             <img src="/imagens/logo-sem-fundo.png" className="w-20 h-auto mr-5" alt="Logo" />
-            <h1>Gerador de cupom</h1>
+            <h1>Generator NF</h1>
           </div>
           <div>
             <button
@@ -114,7 +114,7 @@ export default function Home() {
               onChange={(e) => setCPF(e.target.value)} required/>
             <select name='cargo' value={cargo}
               onChange={(e) => setCargo(e.target.value)} required>
-              <option value="" selected>Selecione uma Opção</option>
+              <option value="" selected>Cargo</option>
               <option value="RECEPCIONISTA">RECEPCIONISTA</option>
               <option value="GERENCIA">GERENTE</option>
               <option value="COMERCIAL">COMERCIAL</option>
@@ -123,21 +123,21 @@ export default function Home() {
             </select>
             <select name='tipo' value={tipo}
               onChange={(e) => setTipo(e.target.value)} required>
-              <option value="" selected>Selecione uma Opção</option>
+              <option value="" selected>Nota</option>
               <option value="Empréstimo Financeiro">Empréstimo Financeiro</option>
               <option value="Adiantamento">Adiantamento</option>
               <option value="Vale">Vale</option>
             </select>
             <select name='operacao' value={operacao}
               onChange={(e) => setOperacao(e.target.value)} required>
-              <option value="" selected>Selecione uma Opção</option>
+              <option value="" selected>Tipo</option>
               <option value="Pagamos">Pagamos</option>
             </select>
             <input type="number" name="valor" placeholder="Valor" id="valor" value={valor}
-              onChange={(e) => setValor(e.target.value)} required/>
-            <input type="text" name="empresa" value={empresa}
+              onChange={(e) => setValor(e.target.value)} required/> 
+            <input type="text" name="empresa" placeholder="Empresa" value={empresa}
               onChange={(e) => setEmpresa(e.target.value)} required/>
-            <input type="number" name="cnpj" value={cnpj}
+            <input type="number" name="cnpj" placeholder="CNPJ" value={cnpj}
               onChange={(e) => setCNPJ(e.target.value)} required/>
             <input type="date" name="data" id="data" value={data}
               onChange={(e) => setData(e.target.value)} required/>
